@@ -1,26 +1,3 @@
-// // transfer to the product page
-
-
-
-setTimeout(() => {
-  document.getElementById("womenJacks").addEventListener("click", function () {
-    transfer("womenJacket");
-  });
-  document.getElementById("womenAcc").addEventListener("click", function () {
-    transfer("womenAccessories");
-  });
-  document.getElementById("menShirts").addEventListener("click", function () {
-    transfer("mensShirt");
-  });
-  document.getElementById("athleticz").addEventListener("click", function () {
-    window.location.href = "zaraAthleticz.html";
-  });
-  document.getElementById("menShoes").addEventListener("click", function () {
-    transfer("mensShoes");
-  });
-}, 3000);
-
-function transfer(string) {
-  localStorage.setItem("search", JSON.stringify(string));
-  window.location.href = "./products.html";
-}
+// La navegacion por categorias ahora se resuelve directamente desde
+// components/header.js (funcion goTo), asi que este archivo ya no
+// necesita enganchar ids de un menu Zara que no existen en el nuevo header.
